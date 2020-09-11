@@ -6,7 +6,7 @@ async function getUser() {  // 로딩 시 사용자 정보를 가져오는 함�
         list.innerHTML = '';
         // 사용자마다 반복적으로 화면 표시 및 이벤트 연결
         Object.keys(users).map(function (key) {
-            const userDiv = doucument.createElement('div');
+            const userDiv = document.createElement('div');
             const span = document.createElement('span');
             span.textContent = users[key];
             const edit = document.createElement('button');
@@ -17,7 +17,7 @@ async function getUser() {  // 로딩 시 사용자 정보를 가져오는 함�
                     return alert('이름을 반드시 입력하셔야 합니다');
                 }
                 try {
-                    await axios, put('/user/' + key, { name });
+                    await axios.put('/user/' + key, { name });
                     getUser();
                 } catch (err) {
                     console.error(err);

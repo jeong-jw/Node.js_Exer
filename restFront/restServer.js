@@ -27,7 +27,7 @@ http.createServer(async (req, res) => {
                 // 주소에 해당하는 라우트를 못 찾았다는 404 Not Found error 발생
             }
         } else if (req.method === 'POST') {
-            if (req.url === '/users') {
+            if (req.url === '/user') {
                 let body = '';
                 // 요청의 body를 stream 형식으로 받음
                 req.on('data', (data) => {

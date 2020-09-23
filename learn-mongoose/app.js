@@ -1,11 +1,9 @@
-const connect = require("./schemas");
-
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
 const nunjucks = require('nunjucks');
 
-const connect = require('./learn-mongoose/schemas');
+const connect = require('./schemas');
 
 const app = express();
 app.set('port', process.env.PORT || 3002);

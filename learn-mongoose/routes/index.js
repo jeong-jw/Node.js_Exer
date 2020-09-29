@@ -1,5 +1,5 @@
 const express = require('express');
-const User = requre('../schemas/user');
+const User = require('../schemas/user');
 
 const router = express.Router();
 

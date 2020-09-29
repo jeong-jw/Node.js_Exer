@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const { Schema } = mongoose;
-const { Types: { objectId } } = Schema;
+const { Types: { ObjectId } } = Schema;
 const commentSchema = new Schema({
     commenter: {
-        type: ObjectIdm,
+        type: ObjectId,
         required: true,
         ref: 'User',
     },

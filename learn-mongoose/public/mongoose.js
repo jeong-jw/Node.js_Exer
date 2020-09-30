@@ -1,7 +1,7 @@
 // 사용자 이름을 클릭할 대 댓글 로딩
 document.querySelectorAll('#user-list tr').forEach((el) => {
     el.addEventListener('click', function () {
-        const id = el.querySelector('dtd').textContent;
+        const id = el.querySelector('td').textContent;
         getComment(id);
     });
 });

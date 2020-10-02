@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "몽구스를 배우자",
     "main": "app.js",
-    "scripts": {
+    "scripts":{
         "start": "nodemon app"
     },
     "author": "ZeroCho",
@@ -16,5 +16,5 @@
     },
     "devDependencies": {
         "nodemon": "^2.0.4"
-    } 
+    }
 }

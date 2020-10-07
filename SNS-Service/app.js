@@ -4,14 +4,14 @@ const morgan = require('morgan');
 const path = require('path');
 const session = require('express-session');
 const nunjucks = require('nunjucks');
-const dotenv = requrie('dotenv');
+const dotenv = require('dotenv');
 
 dotenv.config();
 const pageRouter = require('./routes/page');
 
 const app = express();
 app.set('port', process.env.PORT || 8001);
-app.set('view engin', 'html');
+app.set('view engine', 'html');
 nunjucks.configure('views', {
     express: app,
     watct: true,

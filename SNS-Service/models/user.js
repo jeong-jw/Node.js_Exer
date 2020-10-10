@@ -18,7 +18,7 @@ module.exports = class User extends Sequelize.Model {
             },
             provider: {
                 type: Sequelize.STRING(10),
-                allowNull: true,
+                allowNull: false,
                 defaultValue: 'local',
             },
             snsId: {
@@ -38,6 +38,11 @@ module.exports = class User extends Sequelize.Model {
     }
     static asscociate(db) {
         db.User.hasMany(db.Post);
+        db.User.belongsToMany(db.User, {
+            foreignKey: 'followerId',
+            as: 'Followers',
+            through: 'Follow',
+        });
         db.User.belongsToMany(db.User, {
             foreignKey: 'followerId',
             as: 'Followings',

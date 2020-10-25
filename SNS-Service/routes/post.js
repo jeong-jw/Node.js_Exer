@@ -12,7 +12,7 @@ try {
     fs.readdirSync('uploads');
 } catch (error) {
     console.error('uploads 폴더가 없어 uploads 폴더를 생성합니다.');
-    fs.mkdirSync('upload');
+    fs.mkdirSync('uploads');
 }
 
 const upload = multer({
@@ -37,7 +37,7 @@ const upload2 = multer();
 router.post('/', isLoggedIn, upload2.none(), async (req, res, next) => {
     try {
         const post = await Post.create({
-            content: req.body.contetn,
+            content: req.body.content,
             img: req.body.url,
             UserId: req.user.id,
         });
